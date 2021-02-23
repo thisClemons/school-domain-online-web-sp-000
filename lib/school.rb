@@ -1,6 +1,8 @@
 # code here!
 class School
 
+  attr_reader :roster
+
   def initialize(name)
     @name = name
     @roster = {}
@@ -17,7 +19,7 @@ class School
 
   def sort
     sorted = @roster.collect do |grade, students|
-      students.sort      
+      students.sort
     end
   end
 
