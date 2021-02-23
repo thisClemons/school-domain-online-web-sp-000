@@ -18,9 +18,9 @@ class School
   end
 
   def sort
-    @roster.collect do |grade, students|
-      grade => students.sort
-    end
+    sorted = @roster.transform_values{|students| students.sort}
+
+    sorted
 
   end
 
