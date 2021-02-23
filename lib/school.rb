@@ -9,7 +9,16 @@ class School
   def add_student(student, grade)
     @roster[grade] = [] if !@roster.include?(grade)
     @roster[grade] << student
+  end
 
+  def grade(grade)
+    @roster[grade]
+  end
+
+  def sort
+    sorted = @roster.collect do |grade, students|
+      students.sort      
+    end
   end
 
 
